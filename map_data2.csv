@@ -1,0 +1,9 @@
+Name,Type,Start_X,Start_Y,End_X,End_Y,capacity,nearbyStreet
+Hospital A,Hospital,16,20,,,2000,Street 1
+Hospital B,Hospital,24,30,,,1000,Street 3
+School X,School,10,21,,,1000,Street 2
+School Y,School,30,29,,,500,Street 3
+Street 1,Street,5,20,15,20,,
+Street 2,Street,15,20,25,30,,
+Street 3,Street,25,30,35,30
+Subway,Subway,15,20,25,30,,

@@ -14,7 +14,7 @@ def drawMap(csv_path = 'map_data.csv'):
     def write_label(start_x, start_y, end_x, end_y, row):
         if start_x == end_x and start_y != end_y:
             if row['Type'] == 'Street':
-                ax.text(start_x, ((start_y + end_y) / 2)+0.5, 'Street', rotation=90, fontsize=10)
+                ax.text(start_x, ((start_y + end_y) / 2)+0.5, row['Name'], rotation=90, fontsize=10)
             else:
                 ax.text(start_x, (start_y + end_y) / 2, row['Name'], rotation=90, fontsize=10)
         elif start_y == end_y and start_x != start_y:
@@ -45,7 +45,7 @@ def drawMap(csv_path = 'map_data.csv'):
         ax.plot([start_x, end_x], [start_y, end_y], color='yellow', linestyle='-', linewidth=3, alpha=0.5, label='Subway')
         write_label(start_x, start_y, end_x, end_y, row)
 
-    # 绘制医院和学校
+    # draw buildings
     for i, row in hospitals.iterrows():
         if row['Type'] == 'Hospital':
             ax.scatter(row['Start_X'], row['Start_Y'], color='red', marker='H', s=200, label='Hospital')
@@ -63,3 +63,6 @@ def drawMap(csv_path = 'map_data.csv'):
     # 显示地图
     plt.grid(True)
     plt.show()
+
+# 调用函数绘制地图
+drawMap()
