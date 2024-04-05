@@ -1,0 +1,21 @@
+Name,Type,Start_X,Start_Y,End_X,End_Y,capacity,nearbyStreet,color
+Street 1,Street,10,0,10,40,,,
+Street 2,Street,30,0,30,40,,,
+Street 3,Street,0,30,40,30,,,
+Street 4,Street,0,20,40,20,,,
+Street 5,Street,0,10,40,10,,,
+Subway,Subway,5,10,35,10,,,
+Hospital,Hospital,29,19,,,1000,Street 2,red
+School,School,29,21,,,500,Street 4,blue
+Mall,Mall,32,21,,,200,Street 4,yellow
+Park,Park,29,11,,,,Street 5,green
+Fire,Fire,20,19,,,,Street 4,purple
+Police,Police,11,15,,,,Street 1,orange
+Clinic,Clinic,5,21,,,100,Street 4,pink
+Industrial_area,Industrial_area,5,31,,,,Street 3,black
+Residential_building 1,Residential_building,11,29,,,,Street 3,gray
+Residential_building 2,Residential_building,20,9,,,,Street 5,gray
+Residential_building 3,Residential_building,35,9,,,,Street 5,gray
+Station 1,Station,5,10,,,,Subway,yellow
+Station 2,Station,15,10,,,,Subway,yellow
+Station 3,Station,35,10,,,,Subway,yellow

@@ -17,7 +17,7 @@ def csv_to_classes(csv_path):
             try:
                 class_obj = getattr(classes, entries['Type'])
                 instance = class_obj(entries['Name'], (entries['Start_X'], entries['Start_Y']),
-                                     (entries['End_X'], entries['End_Y']))
+                                     (entries['End_X'], entries['End_Y']), entries['Name'][0:2]+str(i))
 
                 roads.append(instance)
             except AttributeError:
@@ -27,7 +27,7 @@ def csv_to_classes(csv_path):
             try:
                 class_obj = getattr(classes, entries['Type'])
                 instance = class_obj(entries['Name'], (entries['Start_X'], entries['Start_Y']),
-                                     entries['nearbyStreet'], entries['capacity'])
+                                     entries['nearbyStreet'], entries['capacity'], entries['Name'][0:2]+str(i))
 
                 facilities.append(instance)
             except AttributeError:
@@ -37,7 +37,7 @@ def csv_to_classes(csv_path):
             try:
                 class_obj = getattr(classes, entries['Type'])
                 instance = class_obj(entries['Name'], (entries['Start_X'], entries['Start_Y']),
-                                     entries['nearbyStreet'], entries['capacity'])
+                                     entries['nearbyStreet'], entries['capacity'], entries['Name'][0:2]+str(i))
 
                 residents.append(instance)
             except AttributeError:
@@ -47,7 +47,7 @@ def csv_to_classes(csv_path):
             try:
                 class_obj = getattr(classes, entries['Type'])
                 instance = class_obj(entries['Name'], (entries['Start_X'], entries['Start_Y']),
-                                     entries['nearbyStreet'])
+                                     entries['nearbyStreet'], entries['Name'][0:2]+str(i))
 
                 facilities.append(instance)
             except AttributeError:

@@ -2,116 +2,128 @@ import math
 
 class Hospital:
 
-    def __init__(self,name,location,street,capacity):
+    def __init__(self,name,location,street,capacity,id):
         """create a hospotal"""
         self.name = name
         self.location = location
         self.street = street
         self.capacity = capacity
+        self.id = id
 
 
 class School:
 
-    def __init__(self,name,location,street,capacity):
+    def __init__(self,name,location,street,capacity,id):
         """create a school"""
         self.name = name
         self.location = location
         self.street = street
         self.capacity = capacity
+        self.id = id
 
 
 class Residential_building:
 
-    def __init__(self,name,location,street,capacity):
+    def __init__(self,name,location,street,capacity,id):
         """create a residential building"""
         self.name = name
         self.location = location
         self.street = street
         self.capacity = capacity
+        self.id = id
 
 
 class Mall:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a mall"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Clinic:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a clinic"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Station:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a station"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Park:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a park"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Industrial_area:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a industrial area"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 class Police_station:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a police station"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Fire_station:
 
-    def __init__(self,name,location,street):
+    def __init__(self,name,location,street,id):
         """create a police station"""
         self.name = name
         self.location = location
         self.street = street
+        self.id = id
 
 
 class Subway:
 
-    def __init__(self, name, start, end):
+    def __init__(self, name, start, end,id):
         """create a Subway"""
         self.name = name
         self.start = start
         self.end = end
         self.depending_facilities = []
+        self.id = id
 
     def add_facilities(self, facility):
         self.depending_facilities.append((facility.name, cal_distance(self, facility)))
 
 class Street:
     
-    def __init__(self,name,start,end):
+    def __init__(self,name,start,end,id):
         """create a Street"""
         self.name = name
         self.start = start
         self.end = end
         self.depending_facilities = []
+        self.id = id
 
     def add_facilities(self, facility):
         self.depending_facilities.append((facility.name, cal_distance(self, facility)))
