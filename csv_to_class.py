@@ -60,8 +60,9 @@ def csv_to_classes(csv_path):
             if facility.street == road.name:
                 road.add_facilities(facility)
 
-    for road in roads:
-        for facility in road.depending_facilities:
-            print(facility)
+    for facility in residents:
+        for road in roads:
+            if facility.street == road.name:
+                road.add_facilities(facility)
 
     return residents, facilities, roads

@@ -37,7 +37,6 @@ def drawRoad(rows, cols, roads):
         for facility in roads:
             add_line_to_map(map, facility.start, facility.end)
             for structure in facility.depending_facilities:
-                print(map[int(structure[1][0])][int(structure[1][1])])
                 map[int(structure[1][0])][int(structure[1][1])] = structure[0]
 
     return map
