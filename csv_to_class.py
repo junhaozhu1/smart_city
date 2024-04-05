@@ -66,4 +66,4 @@ def csv_to_classes(csv_path):
                 road.add_facilities(facility)
 
     # print(roads[0].depending_facilities[0])
-    return resident, facilities, roads
+    return residents, facilities, roads
