@@ -113,7 +113,7 @@ class Subway:
         self.id = id
 
     def add_facilities(self, facility):
-        self.depending_facilities.append((facility.name, cal_distance(self, facility)))
+        self.depending_facilities.append((facility.id, cal_distance(self, facility)))
 
 class Street:
     
@@ -126,7 +126,7 @@ class Street:
         self.id = id
 
     def add_facilities(self, facility):
-        self.depending_facilities.append((facility.name, cal_distance(self, facility)))
+        self.depending_facilities.append((facility.id, cal_distance(self, facility)))
 
 def cal_distance(self, facility):
     start = self.start

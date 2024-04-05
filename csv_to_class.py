@@ -5,6 +5,7 @@ ROAD = ["Street", 'Subway']
 CAPATABLE = ['Hospital', 'School']
 RESIDENT = ['Residential_building']
 
+
 def csv_to_classes(csv_path):
     df = pd.read_csv(csv_path, index_col=False)
     # print(df)
@@ -53,16 +54,14 @@ def csv_to_classes(csv_path):
             except AttributeError:
                 print(f"No class named {entries['Type']} found. Skipping...")
 
-    # print(str(facilities[0].street) == (roads[0].name))
-    # print(roads[0].name)
-    # print(roads)
-    # print(residents)
-
     # add road to facilities list
     for facility in facilities:
         for road in roads:
             if facility.street == road.name:
-                # print(road, facility)
                 road.add_facilities(facility)
+
+    for road in roads:
+        for facility in road.depending_facilities:
+            print(facility)
 
     return residents, facilities, roads
