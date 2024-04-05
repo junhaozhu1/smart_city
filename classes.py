@@ -48,6 +48,15 @@ class Clinic:
         self.street = street
 
 
+class Station:
+
+    def __init__(self,name,location,street):
+        """create a station"""
+        self.name = name
+        self.location = location
+        self.street = street
+
+
 class Park:
 
     def __init__(self,name,location,street):

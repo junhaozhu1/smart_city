@@ -15,10 +15,11 @@ def drawMap(csv_path = 'city_map.csv'):
     industrial_areas = df[df['Type'] == 'Industrial_area']
     police_stations = df[df['Type'] == 'Police_station']
     fire_stations = df[df['Type'] == 'Fire_station']
+    subway_stations = df[df['Type'] == 'Station']
     streets = df[df['Type'] == 'Street']
     subways = df[df['Type'] == 'Subway']
 
-    building_list = [hospitals, schools, residential_buildings, malls, clinics, parks, industrial_areas, police_stations, fire_stations]
+    building_list = [hospitals, schools, residential_buildings, malls, clinics, parks, industrial_areas, police_stations, fire_stations, subway_stations]
 
     def write_label(start_x, start_y, end_x, end_y, row):
         if start_x == end_x and start_y != end_y:

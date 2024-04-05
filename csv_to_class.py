@@ -55,8 +55,8 @@ def csv_to_classes(csv_path):
 
     # print(str(facilities[0].street) == (roads[0].name))
     # print(roads[0].name)
-    # print(roads)
-    # print(resident)
+    print(roads)
+    print(residents)
 
     # add road to facilities list
     for facility in facilities:
@@ -65,5 +65,4 @@ def csv_to_classes(csv_path):
                 print(road, facility)
                 road.add_facilities(facility)
 
-    # print(roads[0].depending_facilities[0])
     return residents, facilities, roads
