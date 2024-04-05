@@ -82,4 +82,4 @@ def drawMap(csv_path = 'city_map.csv'):
     plt.show()
 
 # 调用函数绘制地图
-drawMap()
+# drawMap()

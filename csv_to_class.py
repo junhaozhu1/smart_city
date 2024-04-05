@@ -7,7 +7,7 @@ RESIDENT = ['Residential_building']
 
 def csv_to_classes(csv_path):
     df = pd.read_csv(csv_path, index_col=False)
-    print(df)
+    # print(df)
     roads = []
     facilities = []
     residents = []
@@ -55,14 +55,14 @@ def csv_to_classes(csv_path):
 
     # print(str(facilities[0].street) == (roads[0].name))
     # print(roads[0].name)
-    print(roads)
-    print(residents)
+    # print(roads)
+    # print(residents)
 
     # add road to facilities list
     for facility in facilities:
         for road in roads:
             if facility.street == road.name:
-                print(road, facility)
+                # print(road, facility)
                 road.add_facilities(facility)
 
     return residents, facilities, roads
