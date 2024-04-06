@@ -1,5 +1,7 @@
 import math
-INIT_TIME = 2
+INIT_TIME_WALK = 2
+INIT_TIME_BIKE = 3
+INIT_TIME_CAR = 5
 
 # 计算两点之间的欧式距离
 def euclidean_distance(p1, p2):
@@ -17,7 +19,7 @@ def add_to_buildings(buildings):
             for house_id, house_info in buildings_dict.items():
                 distance = euclidean_distance(coords, house_info['coords'])
                 astar = 0
-                access = {"walk": INIT_TIME, "bike": INIT_TIME, "drive": INIT_TIME}
+                access = {"walk": INIT_TIME_WALK, "bike": INIT_TIME_BIKE, "drive": INIT_TIME_CAR}
                 house_info['neighbors'].append([building_id, coords, distance, astar, access])
 
     for house_id, house_info in buildings_dict.items():

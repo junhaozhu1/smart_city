@@ -4,9 +4,15 @@ from mapTransform import print_map
 from astar import a_star_search_euclidean
 import math
 from add_to_building import add_to_buildings, print_building_dit
-T0 = ["Ho", "Po", "Fi"]
-T1 = ["Sc", "Ma", "Cl"]
-T2 = ["Pa", "In"]
+from report_gengrate import report
+
+CMP = ["Ho", "Po", "Fi"]
+WLL = ["Sc", "Ma", "Cl"]
+HAP = ["Pa", "In"]
+WALK = 6.9 # 69m/min
+BIKE = 27.1
+CAR = 66.4
+
 
 # 读取CSV文件
 residents = []
@@ -16,7 +22,6 @@ residents, facilities, roads = csv_to_classes('city_map.csv')
 
 
 map = map_transform(residents, facilities, roads)
-print_map(map)
 
 building_list = []
 for i,  line in enumerate(map):
@@ -26,14 +31,22 @@ for i,  line in enumerate(map):
 
 buildings_dict = {}
 buildings_dict = add_to_buildings(building_list)
-#print_building_dit(buildings_dict)
 
 for houseId, facilities in buildings_dict.items():
     is_nearest = []
     house_coord = facilities['coords']
     for facility in facilities['neighbors']:
-        #print( type(len(a_star_search_euclidean(map, house_coord, facility[1]))))
-        sth = len(a_star_search_euclidean(map, house_coord, facility[1]))
-        facility[3] = sth
+        facility[3] = len(a_star_search_euclidean(map, house_coord, facility[1]))
 
-print_building_dit(buildings_dict)
+    facilities['neighbors'] = sorted(facilities['neighbors'], key=lambda x: x[3])
+    for facility in facilities['neighbors']:
+        if facility[0][:2] in is_nearest:
+            facilities['neighbors'].remove(facility)
+        else:
+            is_nearest.append(facility[0][:2])
+            facility[4]['walk'] += facility[3] / WALK
+            facility[4]['bike'] += facility[3] / BIKE
+            facility[4]['drive'] += facility[3] / CAR
+
+
+report(buildings_dict, residents)

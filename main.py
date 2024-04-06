@@ -1,14 +1,14 @@
 import tkinter as tk
 from tkinter import filedialog
-import createMap
+from createMap import drawMap
 import csv
 
 
 def run_creat_map(file_path):
-    createMap.drawMap(file_path)
+    drawMap(file_path)
 
 def run_sample():
-    createMap.drawMap()
+    drawMap()
 
 def open_file_dialog():
     # 打开文件对话框，让用户选择txt文件

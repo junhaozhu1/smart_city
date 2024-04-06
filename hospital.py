@@ -5,3 +5,4 @@ class hospital:
         self.name = name
         self.location = location
         self.street = street
+
