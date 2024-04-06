@@ -1,14 +1,41 @@
 import tkinter as tk
-from tkinter import filedialog
-from createMap import drawMap
+from tkinter import filedialog, messagebox
+import createMap
 import csv
-
+import os
+import subprocess
 
 def run_creat_map(file_path):
-    drawMap(file_path)
+    open_distance_window()
+    createMap.drawMap(file_path)
 
 def run_sample():
-    drawMap()
+    open_distance_window()
+    createMap.drawMap()
+    
+
+def open_distance_window():
+    # Create a new top-level window
+    distance_window = tk.Toplevel()
+    distance_window.title("Operation")
+    distance_window.geometry("200x100")
+    distance_window.resizable(0, 0)
+
+    # Button to calculate and show the shortest distance
+    calc_button = tk.Button(distance_window, text="Show Report",
+                            command=calculate_and_show_shortest_distance)
+    calc_button.pack(pady=20)
+
+def calculate_and_show_shortest_distance():
+    # Replace 'shortest.py' with the appropriate script and function call
+    script_path = os.path.abspath('shortest.py')
+    process = subprocess.Popen(['python', script_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output, error = process.communicate()
+
+    if process.returncode == 0:
+        messagebox.showinfo("Shortest Distance", output.decode())
+    else:
+        messagebox.showerror("Error", error.decode())
 
 def open_file_dialog():
     # 打开文件对话框，让用户选择txt文件
