@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9265f014-fde8-4b3a-8645-fc91e6bfe9b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/smart_city.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report_gengrate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_to_building.py" beforeDir="false" afterPath="$PROJECT_DIR$/add_to_building.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital.py" beforeDir="false" afterPath="$PROJECT_DIR$/hospital.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shortest.py" beforeDir="false" afterPath="$PROJECT_DIR$/shortest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_data2.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.shortest">
+  <component name="RunManager" selected="Python.main">
     <configuration name="csv_to_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.shortest" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.shortest" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.mapTransform" />
         <item itemvalue="Python.csv_to_class" />

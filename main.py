@@ -18,13 +18,18 @@ def open_distance_window():
     # Create a new top-level window
     distance_window = tk.Toplevel()
     distance_window.title("Operation")
-    distance_window.geometry("200x100")
+    distance_window.geometry("200x150")
     distance_window.resizable(0, 0)
 
     # Button to calculate and show the shortest distance
-    calc_button = tk.Button(distance_window, text="Show Report",
+    calc_button = tk.Button(distance_window, text="    Show Report    ",
                             command=calculate_and_show_shortest_distance)
     calc_button.pack(pady=20)
+
+    sugg_button = tk.Button(distance_window, text="Show Suggestions",
+                            command=calculate_and_show_shortest_distance)
+    sugg_button.config(state="disabled")
+    sugg_button.pack(pady=20)
 
 def calculate_and_show_shortest_distance():
     # Replace 'shortest.py' with the appropriate script and function call
@@ -59,6 +64,7 @@ def main():
     openfile.place(x=75, y=20)
 
     draw = tk.Button(root, text="Create a new map", command=create_new_map, height=2, width=20)
+    draw.config(state="disabled")
     draw.place(x=75, y=80)
 
     draw = tk.Button(root, text="Draw sample map", command=run_sample, height=2, width=20)
